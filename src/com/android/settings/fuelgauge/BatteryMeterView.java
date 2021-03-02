@@ -110,7 +110,7 @@ public class BatteryMeterView extends CardView {
         layout.addView(waveView);
         layout.addView(linearLayout);
         addView(layout);
-        setRadius(getLayoutParams().height);
+        //setRadius(getLayoutParams().height);
         final int frameColor = context.getColor(R.color.meter_background_color);
         mAccentColorFilter = new PorterDuffColorFilter(
                 Utils.getColorAttrDefaultColor(context, android.R.attr.colorAccent),

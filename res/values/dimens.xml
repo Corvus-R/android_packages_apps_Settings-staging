@@ -320,7 +320,7 @@
     <dimen name="storage_donut_thickness">4dp</dimen>
 
     <!-- Battery meter view size -->
-    <dimen name="battery_meter_width">165dp</dimen>
+    <dimen name="battery_meter_width">@dimen/match_parent</dimen>
     <dimen name="battery_meter_height">165dp</dimen>
 
     <!-- Margin for the reset screens -->
