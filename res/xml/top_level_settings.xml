@@ -22,22 +22,6 @@
     android:title="Settings">
 
     <Preference
-        android:key="top_level_ravenlair_settings"
-        android:title="@string/ravenlair_title"
-        android:summary="@string/ravenlair_summary"
-        android:icon="@drawable/ic_settings_ravenlair"
-        android:order="-130"
-        android:fragment="com.raven.lair.RavenLair"/>
-
-    <Preference
-        android:key="top_level_themes"
-        android:title="@string/corvus_themes_title"
-        android:summary="@string/corvus_themes_summary"
-        android:icon="@drawable/ic_homepage_corvus_themes"
-        android:fragment="com.android.settings.StartThemes"
-        android:order="-125"/>
-
-    <Preference
         android:key="top_level_network"
         android:title="@string/network_dashboard_title"
         android:summary="@string/summary_placeholder"

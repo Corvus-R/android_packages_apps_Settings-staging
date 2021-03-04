@@ -20,10 +20,12 @@ import android.animation.LayoutTransition;
 import android.app.ActivityManager;
 import android.app.settings.SettingsEnums;
 import android.os.Bundle;
+import android.content.Intent;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.Toolbar;
+import androidx.cardview.widget.CardView;
 
 import androidx.annotation.VisibleForTesting;
 import androidx.fragment.app.Fragment;
@@ -38,6 +40,8 @@ import com.android.settings.homepage.contextualcards.ContextualCardsFragment;
 import com.android.settings.overlay.FeatureFactory;
 
 public class SettingsHomepageActivity extends FragmentActivity {
+    private CardView mRavenLair;
+    private CardView mRavenThemes;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,6 +61,29 @@ public class SettingsHomepageActivity extends FragmentActivity {
         final ImageView avatarView = findViewById(R.id.account_avatar);
         getLifecycle().addObserver(new AvatarViewMixin(this, avatarView));
         getLifecycle().addObserver(new HideNonSystemOverlayMixin(this));
+
+        // Custom Cardviews
+        mRavenLair = findViewById(R.id.raven_lair);
+        mRavenThemes = findViewById(R.id.raven_themes);
+        mRavenLair.setOnClickListener(new View.OnClickListener() {
+        public void onClick(View v) {
+            Intent nIntent = new Intent(Intent.ACTION_MAIN);
+            nIntent.setClassName("com.android.settings",
+            "com.android.settings.Settings$RavenLairActivity");
+            startActivity(nIntent);
+        }
+    });
+
+        mRavenThemes.setOnClickListener(new View.OnClickListener() {
+        public void onClick(View v) {
+            Intent nIntent = new Intent(Intent.ACTION_MAIN);
+            nIntent.setClassName("com.corvus.themes",
+                "com.corvus.themes.MainActivity");
+            startActivity(nIntent);
+        }
+    });
+
+
 
         if (!getSystemService(ActivityManager.class).isLowRamDevice()) {
             // Only allow contextual feature on high ram devices.

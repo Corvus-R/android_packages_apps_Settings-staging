@@ -20,4 +20,4 @@
     android:id="@+id/divider"
     android:layout_width="@dimen/vertical_divider_width"
     android:layout_height="match_parent"
-    android:background="?android:attr/dividerVertical"/>
+    android:background="@android:color/transparent"/>
