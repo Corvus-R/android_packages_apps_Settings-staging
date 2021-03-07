@@ -48,28 +48,6 @@
         android:persistent="false"
         android:title="@string/display_category_title">
 
-        <Preference
-            android:fragment="com.android.settings.display.ToggleFontSizePreferenceFragment"
-            android:key="font_size_preference_screen"
-            android:persistent="false"
-            android:title="@string/title_font_size"
-            settings:controller="com.android.settings.display.FontSizePreferenceController"
-            settings:searchable="false"/>
-
-     <com.android.settings.display.ScreenZoomPreference
-            android:fragment="com.android.settings.display.ScreenZoomSettings"
-            android:key="accessibility_settings_screen_zoom"
-            android:persistent="false"
-            android:title="@string/screen_zoom_title"
-            settings:searchable="false"/>
-
-       <SwitchPreference
-            android:key="dark_ui_mode_accessibility"
-            android:persistent="false"
-            android:title="@string/dark_ui_mode"
-            settings:controller="com.android.settings.display.DarkUIPreferenceController"
-            settings:searchable="false"/>
-
        <Preference
             android:fragment="com.android.settings.accessibility.MagnificationPreferenceFragment"
             android:icon="@drawable/ic_accessibility_magnification"
@@ -138,28 +116,12 @@
             android:title="@string/accessibility_vibration_settings_title"
             settings:controller="com.android.settings.accessibility.VibrationPreferenceController"/>
 
-        <Preference
-            android:fragment="com.android.settings.gestures.SystemNavigationGestureSettings"
-            android:key="gesture_system_navigation_input_summary_accessibility"
-            android:persistent="false"
-            android:title="@string/system_navigation_title"
-            settings:searchable="false"
-            settings:controller="com.android.settings.gestures.SystemNavigationPreferenceController"/>
-
     </PreferenceCategory>
 
     <PreferenceCategory
         android:key="audio_and_captions_category"
         android:persistent="false"
         android:title="@string/audio_and_captions_category_title">
-
-        <Preference
-            android:key="live_caption"
-            android:persistent="false"
-            android:summary="@string/live_caption_summary"
-            android:title="@string/live_caption_title"
-            settings:searchable="false"
-            settings:controller="com.android.settings.accessibility.LiveCaptionPreferenceController"/>
 
         <SwitchPreference
             android:key="toggle_master_mono"
