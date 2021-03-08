@@ -42,11 +42,11 @@
                 android:layout_marginStart="@dimen/contextual_card_side_margin"
                 android:layout_marginEnd="@dimen/contextual_card_side_margin"/>
 
-	<TextView
+	    <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:layout_marginStart="@dimen/contextual_card_side_margin"
+            android:layout_marginStart="24dp"
             android:text="Corvus Settings"
             android:textSize="24sp"
             android:textColor="?android:attr/textColorPrimary"/>
@@ -134,7 +134,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:layout_marginStart="@dimen/contextual_card_side_margin"
+            android:layout_marginStart="24dp"
             android:text="Device Settings"
             android:textSize="24sp"
             android:textColor="?android:attr/textColorPrimary"/>
